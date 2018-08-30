@@ -6,7 +6,7 @@ build:
         pre_build:
             commands:
                 - 'npm install'
-                - 'cd js/sub/surveyman.js && npm install && cd ../../../'
+                - 'bash cd js/sub/surveyman.js && npm install && cd ../../../'
         build:
             commands:
                 - 'npm run build'
