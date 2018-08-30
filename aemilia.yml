@@ -1,0 +1,22 @@
+version: 0.1
+env:
+    variables: []
+build:
+    phases:
+        pre_build:
+            commands:
+                - 'npm install'
+                - 'cd js/sub/surveyman.js && npm install && cd ../../../'
+        build:
+            commands:
+                - 'npm run build'
+        post_build:
+            commands: []
+    artifacts:
+        files:
+            - '**/*'
+        discardPaths: true
+        baseDirectory: /
+    cache:
+        paths:
+            - node_modules
